@@ -1,0 +1,25 @@
+.head{
+    display: flex;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container >div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.btn-danger,.btn-primary {
+    height: 32px;
+    width: 70px;
+    font-size: small;
+}
+.bloque{
+    display: flex;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+

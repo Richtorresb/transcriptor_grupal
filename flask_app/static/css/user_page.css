@@ -1,0 +1,20 @@
+div.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+}
+.btn-danger{
+    height: 30px;
+    font-size: small;
+}
+.dashboard{
+    font-size: medium;
+
+}
+.header{
+    display: flex;
+    gap: 10%;
+}
+.nombre_seleccionado h1{
+    margin-bottom: 10%;
+}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block titulo %}Escritos generales{% endblock %}
+{% block contenido %}
+{%block css%}
+    <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+{% endblock %}
+
+<div class="container mt-3">
+    <h1>Bienvenido {{session.first_name}} {{session.last_name}}!</h1>
+    <a class="btn btn-danger" href="/logout">SALIR</a>
+</div>
+<hr>
+<div class="ms-4">
+    <h2>Sube tu archivo</h2>
+    
+    <div class="col" >
+        <h4>Audio wav</h4>
+        <form action="/registrar_archivo_wav" method="POST" autocomplete="off" enctype="multipart/form-data">
+            <div class="custom-file">
+                <input type="file" name="file" id="file" style="width: 400px;">
+            </div>
+            <div class="form-group mb-5 text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-sm">Enviar </button>
+            </div>
+        </form>
+    </div>
+    <div class="col" >
+        <h4>Audio Youtube</h4>
+        <form action="/registrar_youtube" method="POST" autocomplete="off" enctype="multipart/form-data">
+            <div class="custom-file">
+                <input type="text" name="youtube" id="youtube" placeholder="ej: http://www.youtube.com">
+            </div>
+            <div class="form-group mb-5 text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-sm">Enviar </button>
+            </div>
+        </form>
+    </div>
+    <h4>Audio MP4</h4>
+        <form action="/registrar_mp4" method="POST" autocomplete="off" enctype="multipart/form-data">
+            <div class="custom-file">
+                <input type="file" name="mp4" id="mp4" style="width: 400px;">
+            </div>
+            <div class="form-group mb-5 text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-sm">Enviar </button>
+            </div>
+        </form>
+    <h4>Audio M4A/Grabadora de celular</h4>
+        <form action="/registrar_m4a" method="POST" autocomplete="off" enctype="multipart/form-data">
+            <div class="custom-file">
+                <input type="file" name="m4a" id="m4a" style="width: 400px;">
+            </div>
+            <div class="form-group mb-5 text-center mt-5">
+                <button type="submit" class="btn btn-primary btn-sm">Enviar </button>
+            </div>
+        </form>
+</div>
+
+{% endblock %}

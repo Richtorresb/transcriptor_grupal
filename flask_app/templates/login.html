@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block titulo %}Login Registration{% endblock %}
+{% block contenido %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 mb-4">
+            <h1>Registro de Usuario</h1>
+            <hr>
+            <form action="/procesar_registro" method="post">
+                <div class="mb-3">
+                    <label for="first_name_registro" class="form-label">Nombre</label>
+                    <input type="text" name="first_name" class="form-control" id="first_name_registro"  placeholder="Ejemplo: Richard">
+                </div>
+                <div class="mb-3">
+                    <label for="last_name_registro" class="form-label">Apellido</label>
+                    <input type="text" name="last_name" class="form-control" id="last_name_registro"  placeholder="Ejemplo: Torres">
+                </div>
+                <div class="mb-3">
+                    <label for="email_registro" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="email_registro" aria-describedby="emailHelp" placeholder="Ejemplo: nombre@dominio.com">
+                    <div id="emailHelp" class="form-text">No compartas tu correo con nadie.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password_registro" class="form-label">Contraseña</label>
+                    <input type="password" name="password" class="form-control" id="password_registro">
+                </div>
+                <div class="mb-3">
+                    <label for="cpassword_registro" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" name="cpassword" class="form-control" id="cpassword_registro">
+                </div>
+                <button type="submit" class="btn btn-primary">Registro</button>
+            </form>
+
+        </div>
+
+        <div class="col-md-12 col-lg-6">
+
+            <h1>Login</h1>
+            <hr>
+
+            <form action="/procesar_login" method="post">
+                <div class="mb-3">
+                    <label for="identificacion" class="form-label">Email</label>
+                    <input type="text" name="identificacion" class="form-control" id="identificacion" aria-describedby="identificacionHelp" placeholder="Ejemplo: nombre@dominio.com">
+                    <div id="identificacionHelp" class="form-text">No compartas tu correo con nadie.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" name="password" class="form-control" id="password">
+                </div>
+                <button type="submit" class="btn btn-success">Login</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

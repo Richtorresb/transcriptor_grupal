@@ -12,7 +12,6 @@ import pytube
 
 @app.route("/audios")
 def index():
-
     if 'email' not in session:
         flash('Primero tienes que logearte', 'error')
         return redirect('/login')
@@ -30,13 +29,13 @@ def wav_to_text():
         # check if the post request has the file part
         if 'file' not in request.files:
             flash('No file part','error')
-            return redirect('/')
+            return redirect('/audios')
         file = request.files['file']
         # If the user does not select a file, the browser submits an
         # empty file without a filename.
         if file.filename == '' :
             flash('No selected file', 'error')
-            return redirect('/')
+            return redirect('/audios')
         if file:
             filename = secure_filename(file.filename)
             file.save(os.path.join('flask_app/static/archivos', filename))
@@ -63,7 +62,7 @@ def youtube_to_text():
         # check if the post request has the file part
         if 'youtube' not in request.form:
             flash('No file part','error')
-            return redirect('/')
+            return redirect('/audios')
 
         file = request.form['youtube']
         youtubeVideo = pytube.YouTube(file)
@@ -90,13 +89,13 @@ def mp4_to_text():
         # check if the post request has the file part
         if 'mp4' not in request.files:
             flash('No mp4 part','error')
-            return redirect('/')
+            return redirect('/audios')
         file = request.files['mp4']
         # If the user does not select a file, the browser submits an
         # empty file without a filename.
         if file.filename == '' :
             flash('No selected mp4', 'error')
-            return redirect('/')
+            return redirect('/audios')
         if file:
             filename = secure_filename(file.filename)
             file.save(os.path.join('flask_app/static/archivos', filename))
@@ -122,13 +121,13 @@ def m4a_to_text():
         # check if the post request has the file part
         if 'm4a' not in request.files:
             flash('No m4a part','error')
-            return redirect('/')
+            return redirect('/audios')
         file = request.files['m4a']
         # If the user does not select a file, the browser submits an
         # empty file without a filename.
         if file.filename == '' :
             flash('No selected m4a', 'error')
-            return redirect('/')
+            return redirect('/audios')
         if file:
             filename = secure_filename(file.filename)
             file.save(os.path.join('flask_app/static/archivos', filename))

@@ -7,14 +7,14 @@ bcrypt = Bcrypt(app)
 
 @app.route("/")
 def inicio():
-    return redirect('/audios')
+    return redirect('/home')
 
 @app.route("/login")
 def login():
 
     if 'email' in session:
         flash('Ya estás LOGEADO!', 'warning')
-        return redirect('/')
+        return redirect('/audios')
 
     return render_template("login.html")
 
@@ -40,7 +40,7 @@ def procesar_registro():
         return redirect("/login")
 
     flash("Usuario creado correctamente", "success")
-    return redirect("/audios")
+    return redirect("/login")
 
 
 @app.route("/procesar_login", methods=["POST"])
@@ -60,7 +60,7 @@ def procesar_login():
     session['email'] = usuario.email
     session['last_name'] = usuario.last_name
     
-    return redirect('/')
+    return redirect('/audios')
 
 @app.route('/logout')
 def logout():

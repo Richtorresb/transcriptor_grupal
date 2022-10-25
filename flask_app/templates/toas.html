@@ -1,0 +1,21 @@
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.6.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/toastr.min.js') }}"></script>
+
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "progressBar": true,
+    }
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                toastr.{{category}}('{{ message }}', 'Mensaje de Sistema');
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</script>
+

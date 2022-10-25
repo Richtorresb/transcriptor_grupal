@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
+    <title>CHANGE TECNOLOGÍA</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -49,7 +50,7 @@
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>change@gmail.com</small>
                 </div>
             </div>
-            <div class="col-lg-4 text-center text-lg-end">
+            <!-- <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
@@ -57,7 +58,7 @@
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
                     <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Topbar End -->
@@ -66,7 +67,7 @@
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <a href="/home" class="navbar-brand p-0">
                 <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>CHANGE</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -75,7 +76,8 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
                     <a href="/home" class="nav-item nav-link active">Home</a>
-                    <a href="/login" class="nav-item nav-link">Login/Register</a>
+                    <a href="/registro" class="nav-item nav-link">Registro</a>
+                    <a href="/login" class="nav-item nav-link">Login</a>
                     <a href="/audios" class="nav-item nav-link">Transcripción</a>
                     <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
@@ -94,7 +96,7 @@
                             <a href="quote.html" class="dropdown-item">Free Quote</a>
                         </div>
                     </div> -->
-                    <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                    
                 </div>
 
             </div>
@@ -509,10 +511,10 @@
                 <h5 class="fw-bold text-primary text-uppercase">Nuestro equipo</h5>
                 <h1 class="mb-0">Un equipo único para un cambio único</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-5 mx-auto">
                 <div class="col wow slideInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light rounded overflow-hidden">
-                        <div class="team-img position-relative overflow-hidden">
+                    <div class="team-item bg-light rounded overflow-hidden p-4">
+                        <div class="team-img position-relative overflow-hidden" >
                             <img class="img-fluid w-100" src="{{ url_for('static', filename='img/richard.jpg') }}" alt="">
                             <div class="team-social">
                                 <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.linkedin.com/in/richard-mat%C3%ADas-torres-barriga-0473b622a/"><i class="fab fa-linkedin-in fw-normal"></i></a>
@@ -525,14 +527,11 @@
                     </div>
                 </div>
                 <div class="col wow slideInUp" data-wow-delay="0.6s">
-                    <div class="team-item bg-light rounded overflow-hidden">
+                    <div class="team-item bg-light rounded overflow-hidden p-4">
                         <div class="team-img position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ url_for('static', filename='img/team-2.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="{{ url_for('static', filename='img/jairo.jpg') }}" alt="">
                             <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.linkedin.com/in/jairo-flores-rivera-9a96a412a/"><i class="fab fa-linkedin-in fw-normal"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
@@ -674,10 +673,10 @@
                                 <h3 class="text-light mb-0">Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Login/Registro</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Transcripción</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contacto</a>
+                                <a class="text-light mb-2" href="/home"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="/registro"><i class="bi bi-arrow-right text-primary me-2"></i>Registro</a>
+                                <a class="text-light mb-2" href="/login"><i class="bi bi-arrow-right text-primary me-2"></i>Login</a>
+                                <a class="text-light" href="/audios"><i class="bi bi-arrow-right text-primary me-2"></i>Transcripción</a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -685,10 +684,10 @@
                                 <h3 class="text-light mb-0">Popular Links</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="/login"><i class="bi bi-arrow-right text-primary me-2"></i>Login/Registro</a>
-                                <a class="text-light mb-2" href="/audios"><i class="bi bi-arrow-right text-primary me-2"></i>Transcripción</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contacto</a>
+                                <a class="text-light mb-2" href="/home"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="/registro"><i class="bi bi-arrow-right text-primary me-2"></i>/egistro</a>
+                                <a class="text-light mb-2" href="/login"><i class="bi bi-arrow-right text-primary me-2"></i>Login</a>
+                                <a class="text-light" href="/audios"><i class="bi bi-arrow-right text-primary me-2"></i>Transcripción</a>
                             </div>
                         </div>
                     </div>

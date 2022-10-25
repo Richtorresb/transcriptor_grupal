@@ -9,20 +9,20 @@ bcrypt = Bcrypt(app)
 def inicio():
     return redirect('/home')
 
-@app.route("/login")
-def login():
+@app.route("/registro")
+def registro():
 
-    if 'email' in session:
-        flash('Ya estás LOGEADO!', 'warning')
-        return redirect('/audios')
+    # if 'email' in session:
+    #     flash('Ya estás LOGEADO!', 'warning')
+    #     return redirect('/audios')
 
-    return render_template("login.html")
+    return render_template("register.html")
 
 @app.route("/procesar_registro", methods=["POST"])
 def procesar_registro():
 
     if not Usuario.validar(request.form):
-        return redirect('/login')
+        return redirect('/registro')
 
     pass_hash = bcrypt.generate_password_hash(request.form['password'])
 
@@ -37,10 +37,19 @@ def procesar_registro():
 
     if not resultado:
         flash("error al crear el usuario", "error")
-        return redirect("/login")
+        return redirect("/registro")
 
     flash("Usuario creado correctamente", "success")
     return redirect("/login")
+
+@app.route("/login")
+def login():
+
+    # if 'email' in session:
+    #     flash('Ya estás LOGEADO!', 'warning')
+    #     return redirect('/audios')
+
+    return render_template("log.html")
 
 
 @app.route("/procesar_login", methods=["POST"])
@@ -49,11 +58,11 @@ def procesar_login():
     usuario = Usuario.buscar(request.form['identificacion'])
 
     if not usuario:
-        flash("Usuario/Correo/Clave Invalidas", "error")
+        flash("Correo/Clave Invalidas", "error")
         return redirect("/login")
 
     if not bcrypt.check_password_hash(usuario.password, request.form['password']):
-        flash("Usuario/Correo/Clave Invalidas", "error")
+        flash("Correo/Clave Invalidas", "error")
         return redirect("/login")
 
     session['first_name'] = usuario.first_name

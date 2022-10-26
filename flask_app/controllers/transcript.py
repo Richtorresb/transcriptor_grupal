@@ -86,11 +86,7 @@ def youtube_to_text():
             return redirect('/audios')
 
         file = request.form['youtube']
-        print(file)
-
         youtubeVideo = pytube.YouTube(file)
-        print(youtubeVideo)
-
         audio = youtubeVideo.streams.get_audio_only()
         audio.download(filename='flask_app/static/archivos/tmp.mp4')
         model = whisper.load_model("small")

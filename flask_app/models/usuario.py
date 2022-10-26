@@ -23,7 +23,7 @@ class Usuario(ModeloBase):
         query = "SELECT * FROM usuarios WHERE email = %(dato)s"
         data = { 'dato' : dato }
         results = connectToMySQL("db_transcripcion").query_db(query, data)
-        
+        print(results)
         if len(results) < 1:
             return False
         return cls(results[0])

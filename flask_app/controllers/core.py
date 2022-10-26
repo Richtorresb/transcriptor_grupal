@@ -68,6 +68,7 @@ def procesar_login():
     session['first_name'] = usuario.first_name
     session['email'] = usuario.email
     session['last_name'] = usuario.last_name
+    session['id_usuario'] = usuario.id
     
     return redirect('/audios')
 

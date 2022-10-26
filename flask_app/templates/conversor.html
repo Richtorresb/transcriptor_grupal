@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CHANGE TECNOLOGÍA</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <link href="{{ url_for('static', filename='css/toastr.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }} " rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Chile</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+56 9 71076650</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>change@gmail.com</small>
+                </div>
+            </div>
+            <!-- <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="/home" class="navbar-brand p-0">
+                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>CHANGE</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="/home" class="nav-item nav-link active">Home</a>
+                    <a href="/registro" class="nav-item nav-link">Registro</a>
+                    <a href="/login" class="nav-item nav-link">Login</a>
+                    <a href="/audios" class="nav-item nav-link">Transcripción</a>
+                    <a href="/logout" class="nav-item nav-link">Salir</a>
+                  
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                            <a href="feature.html" class="dropdown-item">Our features</a>
+                            <a href="team.html" class="dropdown-item">Team Members</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="quote.html" class="dropdown-item active">Free Quote</a>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a> -->
+            </div>
+        </nav>
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Bienvenido {{session['first_name'] | title}} {{session['last_name'] | title}}</h1>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+    {% if total_registros == False%}
+    <div class="row text-center">
+        <h2>Convierte tus audios en archivos de textos</h2>
+        <p>Total transcripciones: {{cantidad_Registros}}</p>
+    </div>
+
+    <!-- Quote Start -->
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5 d-flex justify-content-center">
+                <div class="col-lg-5">
+                    <h5 class="mb-2">Selecciona el tipo o formato de audio:</h5>
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-outline-info btn-block text-left loader" type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <h4>Audio wav</h4>
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <form action="/registrar_archivo_wav" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                        <div class="custom-file">
+                                            <input type="file" name="file" id="file" style="width: 400px;">
+                                        </div>
+                                        <div class="form-group mb-5 text-center mt-5">
+                                            <button type="submit" id="btnFetch" class="btn btn-primary btn-sm" onclick="traer()">Enviar </button>
+                                        </div>
+                                        <div class="mt-5 text-center" id="contenido1"></div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-outline-info  btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        <h4>Audio MP4</h4>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    
+                                    <form action="/registrar_mp4" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                        <div class="custom-file">
+                                            <input type="file" name="mp4" id="mp4" style="width: 400px;">
+                                        </div>
+                                        <div class="form-group mb-5 text-center mt-5">
+                                            <button type="submit" id="btnFetch" class="btn btn-primary btn-sm" onclick="traerdos()">Enviar </button>
+                                        </div>
+                                        <div class="mt-5 text-center" id="contenido2"></div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-outline-info  btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <h4>Audio Youtube</h4>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    
+                                    <form action="/registrar_youtube" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                        <div class="custom-file">
+                                            <input type="text" name="youtube" id="youtube" placeholder="ej: http://www.youtube.com">
+                                        </div>
+                                        <div class="form-group mb-5 text-center mt-5">
+                                            <button type="submit" id="btnFetch" class="btn btn-primary btn-sm" onclick="traertres()">Enviar </button>
+                                        </div>
+                                        <div class="mt-5 text-center" id="contenido3"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-outline-info  btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <h4>Audio M4A/Grabadora de celular</h4>
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    
+                                    <form action="/registrar_m4a" method="POST" autocomplete="off" enctype="multipart/form-data">
+                                        <div class="custom-file">
+                                            <input type="file" name="m4a" id="m4a" style="width: 400px;">
+                                        </div>
+                                        <div class="form-group mb-5 text-center mt-5">
+                                            <button type="submit" id="btnFetch" class="btn btn-primary btn-sm" onclick="traercuatro()">Enviar </button>
+                                        </div>
+                                        <div class="mt-5 text-center" id="contenido4"></div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            {%else%}
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 alert">
+                    <div class="alert alert-primary " role="alert">
+                        <h3 class="text-justify">Estimad@ {{session['first_name'] | title}}, estamos muy felices de que hayas ocupado nuestra aplicacion,
+                            y te invitamos a usar la cuenta premium donde gozaras de multiples beneficios.
+                        </h3>
+                        <a class="btn btn-primary mt-3 text-center" href="/beneficios">Conocer beneficios</a>
+                    </div>
+                </div>
+            </div>
+            
+            {%endif%}
+        </div>
+    </div>
+
+    <!-- Quote End -->
+    <!-- Vendor Start -->
+    <!-- Vendor End -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
+                        <a href="index.html" class="navbar-brand">
+                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>CHANGE</h1>
+                        </a>
+                        <p class="mt-3 mb-4">El mundo está cambiando mas rápido de lo que imaginamos, es momento de
+                            correr hacia el futuro.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Contacto</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Chile</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-envelope-open text-primary me-2"></i>
+                                <p class="mb-0">change@gmail.com</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-telephone text-primary me-2"></i>
+                                <p class="mb-0">+56 9 71076650</p>
+                            </div>
+                            <div class="d-flex mt-4">
+                                <a class="btn btn-primary btn-square me-2" href="#"><i
+                                        class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square me-2" href="#"><i
+                                        class="fab fa-linkedin-in fw-normal"></i></a>
+                                <a class="btn btn-primary btn-square" href="#"><i
+                                        class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="/home"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="/registro"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Registro</a>
+                                <a class="text-light mb-2" href="/login"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Login</a>
+                                <a class="text-light" href="/audios"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Transcripción</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Popular Links</h3>
+                            </div>
+                            <div class="link-animated d-flex flex-column justify-content-start">
+                                <a class="text-light mb-2" href="/home"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                                <a class="text-light mb-2" href="/registro"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Registro</a>
+                                <a class="text-light mb-2" href="/login"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Login</a>
+                                <a class="text-light" href="/audios"><i
+                                        class="bi bi-arrow-right text-primary me-2"></i>Transcripción</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-white" style="background: #061429;">
+        <div class="container text-center">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">CHANGE</a>. All Rights
+                            Reserved.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}    "></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}    "></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }} "></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }} "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    {% include 'toas.html' %}
+    </script>
+    <script>
+        
+        
+       
+        
+    var contenido1 = document.querySelector("#contenido1");
+        function traer() {
+                contenido1.innerHTML = `<div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>`
+            }
+    var contenido2 = document.querySelector("#contenido2");
+        function traerdos() {
+                contenido2.innerHTML = `<div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>`
+            } 
+    var contenido = document.querySelector("#contenido3");
+        function traertres() {
+                contenido3.innerHTML = `<div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>`
+            }
+        var contenido = document.querySelector("#contenido4");
+        function traercuatro() {
+                contenido4.innerHTML = `<div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="spinner-grow" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                        </div>`
+            }   
+    </script>
+
+    
+</body>
+
+</html>

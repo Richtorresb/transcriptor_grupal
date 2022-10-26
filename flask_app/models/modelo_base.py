@@ -10,13 +10,13 @@ class ModeloBase():
     def validar_existe(cls, campo, valor):
         query = f"SELECT count(*) as contador FROM {cls.modelo} WHERE {campo} = %({campo})s;"
         data = { campo : valor }
-        results = connectToMySQL("transc_grupo").query_db(query, data)
+        results = connectToMySQL("db_transcripcion").query_db(query, data)
         return results[0]['contador'] > 0
 
     @classmethod
     def get_all(cls):
         query = f"SELECT * FROM {cls.modelo};"
-        results = connectToMySQL("transc_grupo").query_db(query)
+        results = connectToMySQL("db_transcripcion").query_db(query)
         all_data = []
         for data in results:
             all_data.append(cls(data))
@@ -27,7 +27,7 @@ class ModeloBase():
     def get_by_id(cls, id):
         query = f"SELECT * FROM {cls.modelo} WHERE id = %(id)s"
         data = { 'id' : id }
-        results = connectToMySQL("transc_grupo").query_db(query, data)
+        results = connectToMySQL("db_transcripcion").query_db(query, data)
         return results
 
 
@@ -37,7 +37,7 @@ class ModeloBase():
         data = {
             'id': id
         }
-        resultado = connectToMySQL("transc_grupo").query_db(query, data)
+        resultado = connectToMySQL("db_transcripcion").query_db(query, data)
         print("RESULTADO: ", resultado)
         return resultado      
         
@@ -54,6 +54,6 @@ class ModeloBase():
                 INSERT INTO {cls.modelo} ({campos_header}created_at, updated_at)
                 VALUES ({campos_datos} NOW(), NOW());
                 """
-        resultado = connectToMySQL("transc_grupo").query_db(query, data)
+        resultado = connectToMySQL("db_transcripcion").query_db(query, data)
         print("RESULTADO: ", resultado)
         return resultado

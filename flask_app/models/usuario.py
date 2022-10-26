@@ -22,8 +22,8 @@ class Usuario(ModeloBase):
     def buscar(cls, dato):
         query = "SELECT * FROM usuarios WHERE email = %(dato)s"
         data = { 'dato' : dato }
-        results = connectToMySQL("transc_grupo").query_db(query, data)
-        
+        results = connectToMySQL("db_transcripcion").query_db(query, data)
+        print(results)
         if len(results) < 1:
             return False
         return cls(results[0])
@@ -37,7 +37,7 @@ class Usuario(ModeloBase):
                         password = %(password)s,
                         updated_at=NOW() 
                     WHERE id = %(id)s"""
-        resultado = connectToMySQL("transc_grupo").query_db(query, data)
+        resultado = connectToMySQL("db_transcripcion").query_db(query, data)
         print("RESULTADO: ", resultado)
         return resultado
 
@@ -74,7 +74,7 @@ class Usuario(ModeloBase):
     @classmethod
     def get_all_comments(cls):
         query = f"SELECT * FROM {cls.modelo} RIGHT JOIN pensamientos ON pensamientos.user_id = users.id;"
-        results = connectToMySQL("transc_grupo").query_db(query)
+        results = connectToMySQL("db_transcripcion").query_db(query)
 
         all_likes = []
         all_data = []
